@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta name="viewport" content="width=800, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="styles.css">  
+  
+  </head>
+<body>
+  <div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <img src="" alt="" class="athira">
+        <p>Dear Athira</p>
+        <p>“ I am blessed to have a Best Manager like you who is so understanding and supportive…. Happy Women's Day to the best Athira. </p>
+                
+        <center><h4>from</h4></center>
+        <p class="signed">Hemanth Sri Sai</p>
+        
+      </div>
+    </div>
+    <div id="card-front">
+      <div class="wrap">
+        <h1> Happy  Womens day !</h1>
+      </div>
+
+      <button id="open">></button>
+      <button id="close">&lt;</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());  
+
+  </script>
+<div style="visibility: hidden;">
+</div>
+
+  </body>
+  </html>
